@@ -1180,7 +1180,7 @@ var PerfectScrollbar = function PerfectScrollbar(element, userSettings) {
   this.ownerDocument = element.ownerDocument || document;
 
   this.scrollbarXRail = div(cls.element.rail('x'));
-  element.appendChild(this.scrollbarXRail);
+  element.insertAdjacentElement('afterbegin', this.scrollbarXRail);
   this.scrollbarX = div(cls.element.thumb('x'));
   this.scrollbarXRail.appendChild(this.scrollbarX);
   this.scrollbarX.setAttribute('tabindex', 0);
@@ -1208,7 +1208,7 @@ var PerfectScrollbar = function PerfectScrollbar(element, userSettings) {
   this.railXRatio = null;
 
   this.scrollbarYRail = div(cls.element.rail('y'));
-  element.appendChild(this.scrollbarYRail);
+  element.insertAdjacentElement('afterbegin', this.scrollbarYRail);
   this.scrollbarY = div(cls.element.thumb('y'));
   this.scrollbarYRail.appendChild(this.scrollbarY);
   this.scrollbarY.setAttribute('tabindex', 0);
